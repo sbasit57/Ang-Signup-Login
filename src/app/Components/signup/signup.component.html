@@ -6,47 +6,60 @@
             <div class="panel-heading">
               <h3 class="pt-3 font-weight bold">Sign Up</h3>
               <div class="panel-body p-3">
-                <form>
+
+                <form [formGroup]="SignupForm">
+
                   <div class="form-group pt-3">
                     <div class="input-field">
                       <span class="fa fa-user p-2"></span>
-                      <input type="text" placeholder="First Name">
+                      <input formControlName="firstname" type="text" placeholder="First Name">
                     </div>
+                    <small *ngIf="SignupForm.controls['firstname'].dirty && SignupForm.hasError('required','firstname')" class="text-danger">*firstname is required</small>
                   </div>
+
                   <div class="form-group pt-3">
                     <div class="input-field">
                       <span class="fa fa-user p-2"></span>
-                      <input type="text" placeholder="Last Name">
+                      <input formControlName="lastname" type="text" placeholder="Last Name">
                     </div>
+                    <small *ngIf="SignupForm.controls['lastname'].dirty && SignupForm.hasError('required','lastname')" class="text-danger">*lastname is required</small>
                   </div>
+
                   <div class="form-group pt-3">
                     <div class="input-field">
                       <span class="fa fa-envelope p-2"></span>
-                      <input type="text" placeholder="Email">
+                      <input formControlName="email" type="text" placeholder="Email">
                     </div>
+                    <small *ngIf="SignupForm.controls['email'].dirty && SignupForm.hasError('required','email')" class="text-danger">*Email is required</small>
                   </div>
+
                   <div class="form-group pt-3">
                     <div class="input-field">
                       <span class="fa fa-user p-2"></span>
-                      <input type="text" placeholder="Username">
+                      <input formControlName="username" type="text" placeholder="Username">
                     </div>
+                    <small *ngIf="SignupForm.controls['username'].dirty && SignupForm.hasError('required','username')" class="text-danger">*Username is required</small>
                   </div>
+
                   <div class="form-group pt-3">
                     <div class="input-field">
                       <span class="fa fa-lock p-2"></span>
-                      <input [type]="type" placeholder="Password">
+                      <input formControlName="password" [type]="type" placeholder="Password">
                       <span (click)="hideShowPass()" class="fa {{eyeIcon}}"></span>
                     </div>
+                    <small *ngIf="SignupForm.controls['password'].dirty && SignupForm.hasError('required','password')" class="text-danger">*Password is required</small>
                   </div>
+
                   <div class="form-inline fr mt-4"></div>
                   <!-- <a id="forget" class="font-weight-bold">Forget Password?</a> -->
-                  <button type="submit" class="btn btn-primary btn-block mt-4 w-100">Register</button>
+                  <button type="submit" class="btn btn-dark btn-block mt-4 w-100">Register</button>
                   <div class="text-center pt-4 text-muted">Already have an account?
                   <a id="forget" routerLink="/login">
                     Login Now
                   </a>
                   </div>
                 </form>
+
               </div>
               <!-- <div class="mx-3 my-2 py-2 bordert">
                 <div class="text-center py-3">
@@ -61,3 +74,12 @@
     </div>
   </div>
   </div>
+
+  <footer class="bg-dark text-center text-white">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Copyright:
+      <a class="text-white" href="https://www.gerrysdnata.com/">Gerry's Dnata</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
