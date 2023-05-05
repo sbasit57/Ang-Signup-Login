@@ -32,13 +32,18 @@ console.log(this.loginForm.value)
 }
 else{
   console.log("Form is invalid")
+  this.validateAllFormFields(this.loginForm);
   alert("Your credentials are not entered or invalid")
 }}
 
-private validateAllFormFields(formGroup:FormGroup){
-   Object.keys(formGroup.controls).forEach(field=>{
+private validateAllFormFields(formGroup: FormGroup){
+   Object.keys(formGroup.controls).forEach(field=>
+    {
     const control = formGroup.get(field);
-    if(control instanceof FormGroup){
+    if(control instanceof FormControl){
+      control.markAsDirty({onlySelf: true});
+    }
+    else if(control instanceof FormGroup){
       this.validateAllFormFields(control)
     }
    })
