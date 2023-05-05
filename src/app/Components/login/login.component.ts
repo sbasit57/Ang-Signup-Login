@@ -1,5 +1,8 @@
+import { AuthService } from 'src/app/Services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import ValidateForm from 'src/app/Helpers/Validate';
+
 
 @Component({
   selector: 'app-login',
@@ -12,7 +15,7 @@ isText: boolean = false;
 eyeIcon: string = "fa-eye-slash";
 loginForm! : FormGroup;
 
-constructor(private fb: FormBuilder){ }
+constructor(private fb: FormBuilder,private auth: AuthService){ }
 
 ngOnInit():void{
   this.loginForm = this.fb.group({
@@ -26,27 +29,23 @@ hideShowPass(){
   this.isText ? this.type = "text" : this.type = "password";
 }
 
-OnSubmit(){
+OnLogin(){
 if(this.loginForm.valid){
 console.log(this.loginForm.value)
+this.auth.login(this.loginForm.value)
+.subscribe({
+  next:(res)=>{
+    alert(res.message)
+  },
+  error:(err)=>{
+    alert(err?.error.message)
+  }
+})
 }
 else{
   console.log("Form is invalid")
-  this.validateAllFormFields(this.loginForm);
+  ValidateForm.validateAllFormFields(this.loginForm);
   alert("Your credentials are not entered or invalid")
 }}
-
-private validateAllFormFields(formGroup: FormGroup){
-   Object.keys(formGroup.controls).forEach(field=>
-    {
-    const control = formGroup.get(field);
-    if(control instanceof FormControl){
-      control.markAsDirty({onlySelf: true});
-    }
-    else if(control instanceof FormGroup){
-      this.validateAllFormFields(control)
-    }
-   })
-}
 
 }
