@@ -18,11 +18,11 @@ SignupForm!:FormGroup;
 
   ngOnInit(): void {
     this.SignupForm = this.fb.group({
-      firstname: ['',Validators.required],
-      lastname : ['',Validators.required],
-      email    : ['',Validators.required],
-      username : ['',Validators.required],
-      password : ['',Validators.required]
+      FirstName: ['',Validators.required],
+      LastName : ['',Validators.required],
+      Email    : ['',Validators.required],
+      Username : ['',Validators.required],
+      Password : ['',Validators.required]
     })
   }
   hideShowPass(){
@@ -34,7 +34,7 @@ SignupForm!:FormGroup;
   onSignup(){
     if(this.SignupForm.valid){
       console.log(this.SignupForm.value)
-      this.auth.login(this.SignupForm.value)
+      this.auth.signUp(this.SignupForm.value)
 .subscribe({
   next:(res)=>{
     alert(res.message)

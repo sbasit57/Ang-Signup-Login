@@ -2,6 +2,7 @@ import { AuthService } from 'src/app/Services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import ValidateForm from 'src/app/Helpers/Validate';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,7 +16,7 @@ isText: boolean = false;
 eyeIcon: string = "fa-eye-slash";
 loginForm! : FormGroup;
 
-constructor(private fb: FormBuilder,private auth: AuthService){ }
+constructor(private fb: FormBuilder,private auth: AuthService,private router: Router){ }
 
 ngOnInit():void{
   this.loginForm = this.fb.group({
@@ -36,6 +37,7 @@ this.auth.login(this.loginForm.value)
 .subscribe({
   next:(res)=>{
     alert(res.message)
+    this.router.navigate(['/dashboard']);
   },
   error:(err)=>{
     alert(err?.error.message)
