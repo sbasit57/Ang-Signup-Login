@@ -1,0 +1,32 @@
+.header {
+  height: 55px;
+  width: 100%;
+  padding: 20px 50px;
+  background-color: rgb(1, 101, 183);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 5px 5px 5px #939393;
+  .logo {
+    font-weight: bold;
+    font-size: 20px;
+    padding: -40px;
+  }
+  .user {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    .user-image {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      background-color: rgb(11, 107, 185);
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+  }
+}
