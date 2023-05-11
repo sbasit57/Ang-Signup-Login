@@ -4,6 +4,7 @@ import {
   faShop,
   faBoxes,
   faMoneyBill,
+  faLaptop,
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -16,5 +17,6 @@ export class TopWidgetsComponent {
   faShop = faShop;
   faBoxes = faBoxes;
   faMoneyBill = faMoneyBill;
+  faLaptop = faLaptop;
 
 }

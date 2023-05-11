@@ -1,34 +1,64 @@
+<!-- <div class="profile">
+  <img src="https://cdn.pixabay.com/photo/2017/11/10/05/48/user-2935527_1280.png" alt="profile_picture">
+  <h3>Syed Basit</h3>
+  <p>Admin</p>
+</div>
 <div class="nav-items">
   <div class="nav-item">
     <fa-icon [icon]="faDashboard"></fa-icon>
     <span>Dashboard</span>
   </div>
   <div class="nav-item">
-    <fa-icon [icon]="faLocation"></fa-icon>
-    <span>Locations</span>
+    <fa-icon [icon]="faLaptop"></fa-icon>
+    <span>Assets</span>
   </div>
   <div class="nav-item">
-    <fa-icon [icon]="faShop"></fa-icon>
-    <span>Shops</span>
+    <fa-icon [icon]="faFolderOpen"></fa-icon>
+    <span>Licenses</span>
   </div>
   <div class="nav-item">
     <fa-icon [icon]="faBox"></fa-icon>
-    <span>Products</span>
+    <span>Accessories</span>
   </div>
   <div class="nav-item">
     <fa-icon [icon]="faMoneyBill"></fa-icon>
-    <span>Sales</span>
+    <span>Consumables</span>
   </div>
   <div class="nav-item">
     <fa-icon [icon]="faChartBar"></fa-icon>
-    <span>Statistics</span>
+    <span>Components</span>
   </div>
   <div class="nav-item">
     <fa-icon [icon]="faContactBook"></fa-icon>
-    <span>Contact</span>
+    <span>People</span>
+  </div>
+  <div class="nav-item">
+    <fa-icon [icon]="faFile"></fa-icon>
+    <span>Report</span>
   </div>
   <div class="nav-item">
     <fa-icon [icon]="faHand"></fa-icon>
-    <span>Help</span>
+    <span>Requestables</span>
   </div>
+  <div class="nav-item">
+    <fa-icon [icon]="faSignOut"></fa-icon>
+    <span>Log Out</span>
+  </div>
+</div> -->
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed':''">
+  <div class="logo-container">
+    <button class="logo">A</button>
+    <div class="logo-text" *ngIf="collapsed">Angular</div>
+    <button class="btn-close" *ngIf="collapsed">
+      <i class="fal fa-times close-icon"></i>
+    </button>
+  </div>
+  <ul class="sidenav-nav">
+    <li class="sidenav-nav-item" *ngFor="let data of navData">
+      <a href="" class="sidenav-nav-link" [routerLink]="[data.routeLink]">
+        <i class="sidenav-link-icon" [class]="data.icon"></i>
+        <span class="sidenav-link-text" *ngIf="collapsed"> {{data.label}}</span>
+      </a>
+    </li>
+  </ul>
 </div>

@@ -27,6 +27,14 @@ import { SalesByCategoryComponent } from './Components/sales-by-category/sales-b
 import { LastFewTransactionComponent } from './Components/last-few-transaction/last-few-transaction.component';
 import { TopThreeProductsComponent } from './Components/top-three-products/top-three-products.component';
 import { ChartModule } from 'angular-highcharts';
+import { AssetsComponent } from './Components/assets/assets.component';
+import { LicensesComponent } from './Components/licenses/licenses.component';
+import { AccessoriesComponent } from './Components/accessories/accessories.component';
+import { ConsumablesComponent } from './Components/consumables/consumables.component';
+import { ComponentsComponent } from './Components/components/components.component';
+import { PeopleComponent } from './Components/people/people.component';
+import { ReportComponent } from './Components/report/report.component';
+import { RequestablesComponent } from './Components/requestables/requestables.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +49,15 @@ import { ChartModule } from 'angular-highcharts';
     SalesByWorthComponent,
     SalesByCategoryComponent,
     LastFewTransactionComponent,
-    TopThreeProductsComponent
+    TopThreeProductsComponent,
+    AssetsComponent,
+    LicensesComponent,
+    AccessoriesComponent,
+    ConsumablesComponent,
+    ComponentsComponent,
+    PeopleComponent,
+    ReportComponent,
+    RequestablesComponent
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,12 @@ import {
   faChartBar,
   faContactBook,
   faHand,
+  faFile,
+  faFolderOpen,
+  faLaptop,
+  faSignOut
 } from '@fortawesome/free-solid-svg-icons';
+import { navbarData } from './nav-data';
 
 @Component({
   selector: 'app-side-nav',
@@ -23,5 +28,12 @@ export class SideNavComponent {
   faMoneyBill = faMoneyBill;
   faChartBar = faChartBar;
   faContactBook = faContactBook;
+  faFile= faFile;
   faHand = faHand;
+  faFolderOpen = faFolderOpen;
+  faLaptop = faLaptop;
+  faSignOut = faSignOut;
+
+  collapsed = true;
+  navData = navbarData;
 }
