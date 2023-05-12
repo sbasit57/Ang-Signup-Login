@@ -4,9 +4,12 @@
   </div>
   <div class="main-container">
     <div class="side-nav">
-      <app-side-nav></app-side-nav>
+      <app-side-nav (onToggleSideNav)="onToggleSideNav($event)"></app-side-nav>
     </div>
     <div class="main">
-      <app-main></app-main>
+      <app-main>
+         [collapsed]="isSideNavCollapsed"
+    [screenWidth]="screenWidth"
+      </app-main>
     </div>
   </div>

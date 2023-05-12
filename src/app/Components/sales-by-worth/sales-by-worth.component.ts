@@ -13,7 +13,7 @@ export class SalesByWorthComponent {
       height: 325
     },
     title: {
-      text: 'Month wise sales'
+      text: 'Month wise Cases'
     },
     xAxis: {
       categories: [
@@ -33,18 +33,18 @@ export class SalesByWorthComponent {
     },
     yAxis: {
       title: {
-        text: 'Revenue in $'
+        text: 'Cases in Cities'
       }
     },
     series: [
       {
-        name: "Arizona",
+        name: "Karachi",
         type: "line",
         color: '#044342',
         data: [70, 69, 95, 145, 182, 215, 252, 265, 233, 183, 139, 196]
       },
       {
-        name: 'Connecticut',
+        name: 'Islamabad',
         type: 'line',
         color: '#7e0505',
         data: [
@@ -52,7 +52,7 @@ export class SalesByWorthComponent {
         ]
       },
       {
-        name: 'Ohio',
+        name: 'Dubai',
         type: 'line',
         color: '#ed9e20',
         data: [

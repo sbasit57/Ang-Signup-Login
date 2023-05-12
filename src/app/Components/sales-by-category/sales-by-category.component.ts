@@ -13,14 +13,14 @@ export class SalesByCategoryComponent {
       height: 325
     },
     title: {
-      text: 'Category wise sales'
+      text: 'Category wise Assets'
     },
     xAxis: {
       categories: [
-        'Electronics',
-        'Groceries',
-        'Cosmetics',
-        'Clothes',
+        'Machines',
+        'Peripherals',
+        'Mobile Phones',
+        'Technical Components',
         'Appliances',
       ]
     },
@@ -34,22 +34,22 @@ export class SalesByCategoryComponent {
       type: 'pie',
       data: [
         {
-          name: 'Electronics',
+          name: 'Machines',
           y: 41.0,
           color: '#044342',
         },
         {
-          name: 'Groceries',
+          name: 'Peripherals',
           y: 33.8,
           color: '#7e0505',
         },
         {
-          name: 'Cosmetics',
+          name: 'Mobile Phones',
           y: 6.5,
           color: '#ed9e20',
         },
         {
-          name: 'Clothes',
+          name: 'Technical Components',
           y: 15.2,
           color: '#6920fb',
         },
