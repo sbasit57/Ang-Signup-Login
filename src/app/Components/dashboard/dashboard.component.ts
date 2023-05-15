@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 interface SideNavToggle {
   screenWidth: number;
   collapsed: boolean;
@@ -21,4 +20,5 @@ export class DashboardComponent {
     this.screenWidth = data.screenWidth;
     this.isSideNavCollapsed = data.collapsed;
   }
+
 }

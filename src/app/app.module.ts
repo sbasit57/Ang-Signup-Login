@@ -35,6 +35,7 @@ import { ComponentsComponent } from './Components/components/components.componen
 import { PeopleComponent } from './Components/people/people.component';
 import { ReportComponent } from './Components/report/report.component';
 import { RequestablesComponent } from './Components/requestables/requestables.component';
+import { BodyComponent } from './Components/body/body.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { RequestablesComponent } from './Components/requestables/requestables.co
     ComponentsComponent,
     PeopleComponent,
     ReportComponent,
-    RequestablesComponent
+    RequestablesComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,
