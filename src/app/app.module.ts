@@ -44,6 +44,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { AddcomponentComponent } from './Components/components/addcomponent/addcomponent.component';
 
 
 
@@ -71,7 +72,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     ReportComponent,
     RequestablesComponent,
     BodyComponent,
-    AddAssetsComponent
+    AddAssetsComponent,
+    AddcomponentComponent
   ],
   imports: [
     BrowserModule,
