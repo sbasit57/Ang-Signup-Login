@@ -11,6 +11,7 @@ import { PeopleComponent } from './Components/people/people.component';
 import { ReportComponent } from './Components/report/report.component';
 import { RequestablesComponent } from './Components/requestables/requestables.component';
 import { AccessoriesComponent } from './Components/accessories/accessories.component';
+import { AddAssetsComponent } from './Components/assets/add-assets/add-assets.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path:'people',component:PeopleComponent},
   {path:'report',component:ReportComponent},
   {path:'requestables',component:RequestablesComponent},
-  {path:'accessories',component:AccessoriesComponent}
+  {path:'accessories',component:AccessoriesComponent},
+  {path:'addassets',component:AddAssetsComponent}
 ];
 
 @NgModule({

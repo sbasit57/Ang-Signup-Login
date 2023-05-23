@@ -36,6 +36,17 @@ import { PeopleComponent } from './Components/people/people.component';
 import { ReportComponent } from './Components/report/report.component';
 import { RequestablesComponent } from './Components/requestables/requestables.component';
 import { BodyComponent } from './Components/body/body.component';
+import { AddAssetsComponent } from './Components/assets/add-assets/add-assets.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
+
+
 
 @NgModule({
   declarations: [
@@ -59,7 +70,8 @@ import { BodyComponent } from './Components/body/body.component';
     PeopleComponent,
     ReportComponent,
     RequestablesComponent,
-    BodyComponent
+    BodyComponent,
+    AddAssetsComponent
   ],
   imports: [
     BrowserModule,
@@ -77,7 +89,14 @@ import { BodyComponent } from './Components/body/body.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    ChartModule
+    ChartModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSelectModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
