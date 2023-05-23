@@ -45,6 +45,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { AddcomponentComponent } from './Components/components/addcomponent/addcomponent.component';
+import { AddconsumableComponent } from './Components/consumables/addconsumable/addconsumable.component';
 
 
 
@@ -73,7 +74,8 @@ import { AddcomponentComponent } from './Components/components/addcomponent/addc
     RequestablesComponent,
     BodyComponent,
     AddAssetsComponent,
-    AddcomponentComponent
+    AddcomponentComponent,
+    AddconsumableComponent
   ],
   imports: [
     BrowserModule,
