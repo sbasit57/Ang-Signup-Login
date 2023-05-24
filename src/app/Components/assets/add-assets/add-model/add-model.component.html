@@ -1,0 +1,51 @@
+<div mat-dialog-content class="custom-dialog-content">
+  <div class="heading">
+    <h2>
+      Create New Model
+    </h2>
+  </div>
+  <div class="column">
+    <mat-form-field appearance="fill">
+      <mat-label>Model Name</mat-label>
+      <input matInput type="text" placeholder="GDIT004103">
+    </mat-form-field>
+<mat-form-field>
+  <mat-label>Select Manufacturer</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let model of models" [value]="model.value">
+      {{model.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Select Category</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let model of models" [value]="model.value">
+      {{model.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+  </div>
+<div class="column">
+  <mat-form-field appearance="fill">
+    <mat-label>Model Number</mat-label>
+    <input matInput type="number" placeholder="0910299390">
+  </mat-form-field>
+</div>
+  <div class="row">
+    <mat-form-field>
+      <mat-label>Fieldset</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let model of models" [value]="model.value">
+          {{model.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+
+</div>
+<div mat-dialog-actions class="custom-dialog-actions">
+  <button mat-raised-button class="custom-button" color="warn" (click)="closeAddModel()">Cancel</button>
+  <button mat-raised-button class="custom-button" color="primary">Save</button>
+</div>

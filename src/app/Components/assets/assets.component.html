@@ -1,7 +1,15 @@
   <mat-toolbar color="primary">
   <span>Assets</span>
   <span class="example-spacer"></span>
-  <button color="primary" mat-flat-button (click)="openAddAsset()">
-    New Asset
+  <button mat-button [matMenuTriggerFor]="menu">
+    Select Actions
   </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="openAddAsset()">Add New Asset</button>
+    <button mat-menu-item (click)="openAddModel()">Add New Model</button>
+    <button mat-menu-item (click)="openAddStatus()">Add New Status</button>
+  </mat-menu>
+  <a routerLink="/dashboard" color="primary" mat-flat-button >
+    Back to Dashboard
+  </a>
 </mat-toolbar>

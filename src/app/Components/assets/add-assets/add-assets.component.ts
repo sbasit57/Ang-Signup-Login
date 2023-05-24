@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 interface Model {
   value: string;
   viewValue: string;
@@ -22,6 +23,7 @@ interface Location{
   styleUrls: ['./add-assets.component.scss']
 })
 export class AddAssetsComponent {
+  constructor(private _dialog:MatDialog){}
   models: Model[] = [
     {value: 'hp-0', viewValue: 'Hp'},
     {value: 'dell-1', viewValue: 'Dell'},
@@ -42,5 +44,8 @@ export class AddAssetsComponent {
     {value: 'islamabad-1', viewValue: 'Islamabad'},
     {value: 'dubai-2', viewValue: 'Dubai'},
   ];
+  closeAddAsset(){
+    this._dialog.closeAll();
+  }
 
 }

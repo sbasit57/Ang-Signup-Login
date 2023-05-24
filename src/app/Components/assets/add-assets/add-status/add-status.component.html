@@ -1,0 +1,28 @@
+<div mat-dialog-content class="custom-dialog-content">
+  <div class="heading">
+    <h2>
+      Create New Status
+    </h2>
+  </div>
+  <div class="row">
+    <mat-form-field appearance="fill">
+      <mat-label>Status Name</mat-label>
+      <input matInput type="text" placeholder="">
+    </mat-form-field>
+  <div class="row">
+    <mat-form-field>
+      <mat-label>Status Type</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let status of statuses" [value]="status.value">
+          {{status.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+
+</div>
+<div mat-dialog-actions class="custom-dialog-actions">
+  <button mat-raised-button class="custom-button" color="warn" (click)="closeAddModel()">Cancel</button>
+  <button mat-raised-button class="custom-button" color="primary">Save</button>
+</div>

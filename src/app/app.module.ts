@@ -46,6 +46,9 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { AddcomponentComponent } from './Components/components/addcomponent/addcomponent.component';
 import { AddconsumableComponent } from './Components/consumables/addconsumable/addconsumable.component';
+import { AddModelComponent } from './Components/assets/add-assets/add-model/add-model.component';
+import { AddStatusComponent } from './Components/assets/add-assets/add-status/add-status.component';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 
@@ -75,7 +78,9 @@ import { AddconsumableComponent } from './Components/consumables/addconsumable/a
     BodyComponent,
     AddAssetsComponent,
     AddcomponentComponent,
-    AddconsumableComponent
+    AddconsumableComponent,
+    AddModelComponent,
+    AddStatusComponent
   ],
   imports: [
     BrowserModule,
@@ -100,7 +105,8 @@ import { AddconsumableComponent } from './Components/consumables/addconsumable/a
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
